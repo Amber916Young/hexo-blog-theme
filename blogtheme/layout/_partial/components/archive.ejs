@@ -1,0 +1,32 @@
+
+<%
+    var title = '';
+    if (page.category) title = page.category;
+    if (page.tag) title = page.tag;
+    if (page.archive){
+        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+        else title = "Archives";
+    }
+%>
+
+
+<section id="archives" class="section-archives">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Archives</h2>
+        <p></p>
+      </div>
+      <div class="row content">
+        <% if(title) { %>
+            <h2 class="blog-archive-title"><%- title %></h2>
+            <% } %>
+            <div class="fade-in-down-animation">
+                <div class="archive-container ">
+                    <%- partial('_partial/components/archive-list', {posts_new: site.posts}) %>
+                </div>
+            </div>
+    
+      </div>
+
+    </div>
+</section>

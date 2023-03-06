@@ -1,0 +1,24 @@
+<main id="main" style="min-height: 100%;">
+    <!-- <% console.info(page ) %> -->
+    <% if (is_home()) { %>
+        <%- partial('_partial/components/article-home') %>
+    <% } else if (is_post()) { %>
+        <%- partial('_partial/article/article-content') %>
+    <% } else if (page.title === 'article-index' ) { %>
+        <%- partial('_partial/article/article-index') %>
+    <% } else if (is_category()) { %>
+        <%- partial('_partial/category/category-content') %>
+    <% } else if (is_tag()) { %>
+        <%- partial('_partial/components/tag-content') %>
+    <% } else if (page.title === 'about-index' || page.title === 'about' || page.title === 'aboutme' ) { %>
+        <%- partial('_partial/components/about') %>
+    <% } else if (page.title === 'tags-index' || page.title === 'tag' || page.title === 'tags') { %>
+        <%- partial('_partial/tools/tagcloud') %>
+    <% } else if (page.title === 'category-index' ||page.title === 'category' || page.title === 'categories') { %>
+        <%- partial('_partial/category/category-list') %>
+    <% } else if (is_archive()) { %>
+        <%- partial('_partial/components/archive') %>
+    <% } else { %>
+        <%- partial('_partial/components/404-template') %>
+    <% } %>
+</main>

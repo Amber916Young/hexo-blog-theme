@@ -1,0 +1,13 @@
+<div class="article-copyright-info-container">
+    <ul>
+        <li><%- __('Title') %>: <%= page.title %></li>
+        <li><%- __('Author') %>: <%= theme.base_info.author || config.author %></li>
+        <li><%- __('Release Date') %>: <%= date(page.date, 'YYYY-MM-DD HH:mm:ss') %></li>
+        <li>
+            <%- __('Link') %>: <a href="<%- url_for( getPostUrl((theme.base_info.url || config.url), page.path)) %>"><%= getPostUrl((theme.base_info.url || config.url), page.path) %></a> 
+        </li>
+        <li>
+            <%- __('License') %>: <%= theme.copyright.license_content %> 
+        </li>
+    </ul>
+</div>

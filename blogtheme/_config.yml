@@ -1,7 +1,163 @@
 
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  Home: 
+    path: /#hero
+    icon: bx bx-home
+  Article: 
+    path: '/#article'
+    icon: bx bx-book-content
+  About: 
+    path: '/about-index/#about'
+    icon: bx bx-user
+  Archive:
+    path: '/archive-index/#archives'
+    icon: bx bx-archive
 
+
+# comment
+disqus_shortname: https-amber916young-github-io
+
+base_info:
+  title: tothemoon # Site title
+  author: tothemoon # Author name
+  url: https://amber916young.github.io/ # Site url
 excerpt_link: Read More
+excerpt_length: 50
+
+style:
+  # Theme primary color
+  primary_color: "#005080"
+
+  # Avatar (You can use local image or image external link)
+  avatar: /assets/img/profile-img.jpg # avatar of the author
+
+  # Favicon (You can use local image or image external link)
+  favicon: /assets/img/favicon.ico # favicon of the site
+
+  # Article image align position
+  article_img_align: center # value: left | center
+
+  # Right side width
+  right_side_width: 210px #sidebar width, for toc
+
+  # Content area max width
+  content_max_width: 1000px #content max width, for article
+
+  # Mouse hover
+  hover:
+    shadow: true # shadow effect when the mouse hover
+    scale: false # scale effect when the mouse hover
+
+  # First screen
+  first_screen:
+    enable: true
+    background_image:
+      light: https://evan.beee.top/img/wallhaven-wqery6-light.webp # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+      dark: https://evan.beee.top/img/wallhaven-wqery6-dark.webp # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+    title_color:
+      light: "#fff" # first screen title color (light mode)
+      dark: "#d1d1b6" # first screen title color (dark mode)
+    description: Theme Redefine # the title in the middle of the first screen. HTML supported (e.g. svg html code of your logo)
+    custom_font: # custom font for the first screen
+      enable: false
+      font_family: # the font family name of the url below
+      font_url:  # The url to the font file
+
+
+# ---------------------------------------------------------------------------------------
+# Table of Contents in the Sidebar
+# ---------------------------------------------------------------------------------------
+toc:
+  enable: true
+
+
+# ---------------------------------------------------------------------------------------
+# Post copyright info
+# ---------------------------------------------------------------------------------------
+copyright_info:
+  enable: true
+
+copyright:
+  author: Post author
+  title: Post title
+  link: Post link
+  create_time: Create time
+  license_title: Copyright Notice
+  license_content: "All articles in this blog are licensed under YYJ unless stating additionally."
+
+# ---------------------------------------------------------------------------------------
+# Post page Settings
+# ---------------------------------------------------------------------------------------
+post:
+  # Post word count
+  # Dependencies: hexo-wordcount (npm install hexo-wordcount)
+  # See: https://github.com/willin/hexo-wordcount
+  word_count:
+    enable: true
+    wordcount: true # word count, one article
+    min2read: true # time to read, one article
+
+  # Author label
+  author_label:
+    enable: true
+    auto: false # if true, show Lv1, Lv2, Lv3... , If false, show custom label
+    # label array item can be one or more
+    custom_label_list: ["Master"]
+    placeholder_img: https://evan.beee.top/img/wallhaven-wqery6-light.webp
+# ---------------------------------------------------------------------------------------
+# spotify music plyer 
+# [lover taylor swift] https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator
+# [California 88raising] https://open.spotify.com/embed/track/3Qj2f7BrpJNGj3dbxKpOlp?utm_source=generator
+# https://open.spotify.com/ 
+# ------------------  
+music:
+  enable: true
+  link: https://open.spotify.com/embed/track/3Qj2f7BrpJNGj3dbxKpOlp?utm_source=generator
+
+
+# ---------------------------------------------------------------------------------------
+# Website counthttps://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator
+# ---------------------------------------------------------------------------------------
+website_count:
+  busuanzi_count:
+    enable: true
+    site_uv: true
+    site_pv: true
+    page_pv: true
+
+code_block:
+  copy: true # enable code copy button
+  style: mac # mac | simple
+
+
+local_search:
+  enable: false
+  preload: false 
+
+
+# ---------------------------------------------------------------------------------------
+# Article recommendation 
+# ---------------------------------------------------------------------------------------
+recommended_article: # npm install nodejieba
+  enable: true
+  title: recommended
+  icon: bx bx-book-bookmark
+  max_count: 3
+  placeholder_img: https://evan.beee.top/img/wallhaven-wqery6-light.webp
+  skip_dirs:
+    - wiki/
+
+
+# ---------------------------------------------------------------------------------------
+# Home page article block display settings
+# ---------------------------------------------------------------------------------------
+home_article:
+  date_format: auto # date format in home page article block, value: auto | relative | YYYY-MM-DD | YYYY.MM.DD HH:mm:ss | DD/MM/YYYY | and etc. Support moment js format, see: https://momentjscom.readthedocs.io/en/latest/moment/04-displaying/01-format/
+  category:
+    enable: true # show category in home page article block
+    limit: 3 # max number of categories shown in home page article block
+  tag:
+    enable: true # show tags in home page article block
+    limit: 3 # max number of tags shown in home page article block
+

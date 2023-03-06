@@ -1,0 +1,24 @@
+<section id="Category" class="tags">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Category</h2>
+        <p></p>
+      </div>
+      <div class="row content">
+        <div class="fade-in-down-animation">
+            <div class="category-container">
+                <div class="category-name">
+                    <i class="bx bx-folder"></i>&nbsp;<%= page.category %>
+                </div>
+                <div class="category-post-list">
+                    <%- partial('_partial/components/archive-list', {posts_new: page.posts}) %>
+                </div>
+            </div>
+            <div class="category-paginator">
+                <%- partial('_partial/tools/paginator', {pageObject: page}) %>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+</section>

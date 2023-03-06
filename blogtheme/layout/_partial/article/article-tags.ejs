@@ -1,0 +1,12 @@
+<% if (item.tags && item.tags.length){ %>
+    <span class="article-tags article-meta-item">
+        <i class="bx bx-tag"></i>&nbsp;
+        <ul>
+            <% item.tags.forEach((tag, i) => { %>
+                <li>
+                    <%= i === 0 ? '' : '| ' %><a href="<%- url_for(tag.path) %>"># <%= tag.name %></a>&nbsp;
+                </li>
+            <% }); %>
+        </ul>
+    </span>
+<% } %>

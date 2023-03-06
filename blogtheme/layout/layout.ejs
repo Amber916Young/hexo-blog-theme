@@ -5,22 +5,15 @@
 
 <body>
     <!-- Menu -->
-    <%- partial('_partial/menu') %>
+    <%- partial('_partial/menu-left') %>
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
 
-    <div class="container">
-        <!-- Blog Header: title and subtitle -->
-        <%- partial('_partial/header') %>
+    <% if ( is_home() ) { %>
+        <%- partial('_partial/components/first-screen') %>
+    <% } %>
+    
+    <%- body %>
 
-        <div class="row">
-
-            <!-- Main Content -->
-            <div class="col-sm-8 blog-main">
-                <%- body %>
-            </div>
-
-       
-        </div>
-    </div>
 
     <!-- Footer -->
     <%- partial('_partial/footer') %>

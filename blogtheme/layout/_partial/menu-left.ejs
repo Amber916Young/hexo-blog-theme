@@ -1,0 +1,20 @@
+<header id="header" class="d-flex flex-column justify-content-center">
+  <nav id="navbar" class="navbar nav-menu">
+    <ul style="width: 50%">
+      <% for (var i in theme.menu){ %>
+          <li><a href="<%- url_for(theme.menu[i].path) %>" class="nav-link scrollto"><i class="<%- theme.menu[i].icon %>"></i> <span><%= i %></span></a></li>
+      <% } %>
+    </ul>
+  </nav>
+  <!-- music player -->
+  <% if (theme.music.enable === true){ %>
+    <iframe id="player" class="fade-in-down-animation" style="border-radius:12px"
+    src="<%-theme.music.link %>" 
+    width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <% } %>
+
+ 
+</header>
+<script>
+  
+</script>

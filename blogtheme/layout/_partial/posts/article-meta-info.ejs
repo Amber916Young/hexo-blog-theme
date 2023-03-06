@@ -1,0 +1,46 @@
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="bx bx-pen"></i>&nbsp;
+        <span class="pc"><%= date(articleObject.date, is_post() ? 'YYYY-MM-DD HH:mm:ss' : 'YYYY-MM-DD').replace(" 00:00:00", "").replace(":00", "") %></span>
+        <span class="mobile"><%= date(articleObject.date, is_post() ? 'YYYY-MM-DD HH:mm' : 'YYYY-MM-DD').replace(" 00:00:00", "").replace(":00", "") %></span>
+        <span class="hover-info"><%= __("create_time") %></span>
+    </span>
+    <% if (articleObject.updated && articleObject.updated !== articleObject.date) { %>
+        <span class="article-date article-meta-item">
+            <i class="bx bx-edit"></i>&nbsp;
+            <span class="pc"><%= date(articleObject.updated, is_post() ? 'YYYY-MM-DD HH:mm:ss' : 'YYYY-MM-DD').replace(" 00:00:00", "").replace(":00", "") %></span>
+            <span class="mobile"><%= date(articleObject.updated, is_post() ? 'YYYY-MM-DD HH:mm' : 'YYYY-MM-DD').replace(" 00:00:00", "").replace(":00", "") %></span>
+            <span class="hover-info"><%= __("update_time") %></span>
+        </span>
+    <% } %>
+
+
+    <%- partial('_partial/article/article-categories', {item: articleObject}) %>
+    <%- partial('_partial/article/article-tags', {item: articleObject}) %>
+
+    <%
+    let temp_wordcount_count, temp_min2read_count = null;
+    try {
+        temp_wordcount_count = wordcount(page.content);
+        temp_min2read_count = min2read(page.content);
+    } catch (e) {
+        temp_wordcount_count = 0;
+        temp_min2read_count = 0;
+    }
+    %>
+    <% if(is_post() && theme.hasOwnProperty('post') && theme.post.word_count.enable && theme.post.word_count.wordcount && temp_wordcount_count){ %>
+        <span class="article-wordcount article-meta-item">
+            <i class="bx bx-book"></i>&nbsp;<span><%= temp_wordcount_count %> <%- __('Words') %></span>
+        </span>
+    <% } %>
+    <% if(is_post() && theme.hasOwnProperty('post') && theme.post.word_count.enable && theme.post.word_count.min2read && temp_min2read_count){ %>
+        <span class="article-min2read article-meta-item">
+            <i class="bx bx-time"></i>&nbsp;<span><%= temp_min2read_count %> <%- __('Mins') %></span>
+        </span>
+    <% } %>
+    <% if (is_post() && theme.website_count.busuanzi_count.enable && theme.website_count.busuanzi_count.page_pv) { %>
+        <span class="article-pv article-meta-item">
+            <i class="bx bxs-hot"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    <% } %>
+</div>

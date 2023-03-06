@@ -1,0 +1,24 @@
+
+<section id="article" class="section-archives">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Article</h2>
+            <p></p>
+        </div>
+        <div class="home-content-container fade-in-down-animation">
+            <ul class="home-article-list" style="justify-content: center;">
+               
+                <% site.posts.each(function(item){ %>
+                    <%- partial('_partial/article/article-list', {item: item}) %>
+                <% }); %>
+            </ul>
+            <div class="home-paginator">ds
+                <% console.info(site) %>
+                <%- partial('_partial/tools/paginator', {pageObject: site.pages	}) %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+</script>

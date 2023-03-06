@@ -1,0 +1,43 @@
+<section id="tags" class="tags">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Tags</h2>
+        <p></p>
+      </div>
+      <div class="row content">
+        <% if (site.tags.length){ %>
+            <div class="fade-in-down-animation">
+                <div class="tagcloud-container">
+                    <div class="tagcloud-content">
+                        <%- tagcloud({
+                            min_font: 1,
+                            max_font: 1.6,
+                            unit: 'rem',
+                            amount: 100
+                        }) %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+      </div>
+
+    </div>
+</section>
+<!-- 
+  <% if (site.tags.length){ %>
+    <section class="fade-in-down-animation">
+        <div class="tagcloud-container">
+            <div class="tagcloud-header">
+                <h1 style="margin: 15px 5px; margin-bottom: 30px;"><%- __('tags') %></h1>
+            </div>
+            <div class="tagcloud-content">
+                <%- tagcloud({
+                    min_font: 1,
+                    max_font: 1.6,
+                    unit: 'rem',
+                    amount: 100
+                }) %>
+            </div>
+        </div>
+    </section>
+<% } %> -->
