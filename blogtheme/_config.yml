@@ -22,32 +22,15 @@ base_info:
   title: tothemoon # Site title
   author: tothemoon # Author name
   url: https://amber916young.github.io/ # Site url
+  name: Developer, Photographer,  Kendo player
 excerpt_link: Read More
 excerpt_length: 50
 
 style:
-  # Theme primary color
-  primary_color: "#005080"
-
   # Avatar (You can use local image or image external link)
   avatar: /assets/img/profile-img.jpg # avatar of the author
-
   # Favicon (You can use local image or image external link)
   favicon: /assets/img/favicon.ico # favicon of the site
-
-  # Article image align position
-  article_img_align: center # value: left | center
-
-  # Right side width
-  right_side_width: 210px #sidebar width, for toc
-
-  # Content area max width
-  content_max_width: 1000px #content max width, for article
-
-  # Mouse hover
-  hover:
-    shadow: true # shadow effect when the mouse hover
-    scale: false # scale effect when the mouse hover
 
   # First screen
   first_screen:
@@ -115,7 +98,18 @@ music:
   enable: true
   link: https://open.spotify.com/embed/track/3Qj2f7BrpJNGj3dbxKpOlp?utm_source=generator
 
-
+socialMedia:
+  leetcode:
+    url: https://leetcode.com/BirdyYang/
+    icon: bx bx-leaf
+  instagram:
+    url: https://www.instagram.com/tothemoonbird/?igshid=YmMyMTA2M2Y%3D
+    icon: bx bxl-instagram
+  linkedin:
+    url: https://www.linkedin.com/in/yejia-yang-11105722a/
+    icon: bx bxl-linkedin
+    
+  
 # ---------------------------------------------------------------------------------------
 # Website counthttps://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator
 # ---------------------------------------------------------------------------------------

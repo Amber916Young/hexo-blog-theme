@@ -2607,7 +2607,6 @@ pre .deletion {
 .post-toc-wrap .post-toc ol {
 	list-style:none;
 	margin:0;
-	padding:0 2px 12px 10px;
 	text-align:left
 }
 .post-toc-wrap .post-toc ol ol {
@@ -7355,7 +7354,7 @@ pre .deletion {
 	width:0;
 	height:auto;
 	max-height:calc(100vh - 210px);
-	margin-left:30px;
+	margin-left:10px;
 	overflow-y:auto;
 	overflow-x:hidden;
 	float:right;
@@ -8588,7 +8587,7 @@ div.tabs .tab-content .tab-pane .highlight:last-child,div.tabs .tab-content .tab
 
 
 #player{
-	width: 25%;
+	width: 32%;
 	-webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
 	-moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
 	-o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
